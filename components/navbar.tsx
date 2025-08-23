@@ -13,12 +13,12 @@ export default function Navbar() {
             }
         })
 
-        navTween.fromTo('nav', {
+        navTween.fromTo('.bg-blur', {
             backgroundColor: 'transparent'
         }, {
             // Blur Background
             backgroundColor: '#00000050',
-            backgroundFilter: 'blur(10px)',
+            backdropFilter: 'blur(10px)',
             duration: 1,
             ease: 'power1.inOut'
         })
@@ -26,12 +26,12 @@ export default function Navbar() {
 
     return (
         <nav>
-            <Link href="#home" className="flex items-center gap-2">
-                <Image src="/logo.png" alt='logo' width={40} height={40}/>
+            <Link href="#home" className="flex items-center gap-2 px-4 py-2 rounded-2xl bg-blur">
+                <Image src="/logo.png" alt='logo' priority className="flex-shrink-0" width={40} height={40}/>
                 <h1 className="text-3xl font-semibold">Gadzhi</h1>
             </Link>
 
-            <div className="flex gap-6">
+            <div className="flex gap-6 px-4 py-2 rounded-2xl bg-blur">
                 {nav.map((n, i) => (
                     <Link key={i} href={`#${n.id}`} className="md:hover:underline">
                         <p>{n.title}</p>
