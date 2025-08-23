@@ -1,11 +1,21 @@
 @import "tailwindcss";
 
+@utility text-description {
+  @apply text-[#bebebe]
+}
+
 @utility flex-center {
   @apply flex justify-center items-center;
 }
 
 @utility flex-col-center {
   @apply flex flex-col justify-center items-center;
+}
+
+@layer components {
+  nav {
+    @apply fixed w-full z-50 flex flex-col md:flex-row justify-between items-center gap-5 md:gap-0 p-10;
+  }
 }
 
 .noisy {

@@ -1,19 +1,17 @@
 "use client"
-import { useGSAP } from "@gsap/react";
+import Hero from "@/components/hero";
+import Navbar from "@/components/navbar";
 import gsap from "gsap";
 import { ScrollTrigger, SplitText } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
 export default function Home() {
-  useGSAP(() => {
-    
-  }, [])
-
   return (
-    <div className="flex-col-center gap-6 h-[100dvh]">
-      <h1 id="heading" className="text-6xl">Gadzhi</h1>
-      <p id="paragraph">Owner, Consulting.com </p>
-    </div>
+    <main>
+      <Navbar />
+      <Hero />
+      <div className="h-dvh"></div>
+    </main>
   );
 }
