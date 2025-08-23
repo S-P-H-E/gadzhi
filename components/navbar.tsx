@@ -31,7 +31,7 @@ export default function Navbar() {
                 <h1 className="text-3xl font-semibold">Gadzhi</h1>
             </Link>
 
-            <div className="flex gap-6 px-4 py-2 rounded-2xl bg-blur">
+            <div className="flex gap-6 px-4 py-2 md:py-3 rounded-2xl bg-blur">
                 {nav.map((n, i) => (
                     <Link key={i} href={`#${n.id}`} className="md:hover:underline">
                         <p>{n.title}</p>

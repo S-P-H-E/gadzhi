@@ -13,6 +13,7 @@ export default function Hero() {
 
     useGSAP(() => {
         const heroSplit = new SplitText('#letter', { type: 'chars, words'})
+        const subSplit = new SplitText('#sub', { type: 'chars, words'})
         const paragraphSplit = new SplitText('#paragraph', { type: 'lines'})
 
         // heroSplit.chars.forEach((char) => char.classList.add('text-gradient'))
@@ -20,6 +21,14 @@ export default function Hero() {
             color: '#b95a2c',
             opacity: 0,
             yPercent: 50,
+            duration: 2,
+            ease: 'expo.out',
+            stagger: 0.05
+        })
+
+        gsap.from(subSplit.chars, {
+            color: '#b95a2c',
+            opacity: 0,
             duration: 2,
             ease: 'expo.out',
             stagger: 0.05
@@ -89,14 +98,14 @@ export default function Hero() {
                 <Image id="right-stick" className="absolute right-0 top-[50px] md:top-[200px] opacity-90" src='/hero-right-stick.png' alt="hero right stick" width={100} height={100}/>
 
                 <div className="absolute bottom-0 left-0 p-20 space-y-2">
-                    <p id="letter" className="text-lg text-description">For. Modern. Gents</p>
+                    <p id="sub" className="text-lg text-description">For. Modern. Gents</p>
                     <p id="paragraph" className="text-5xl">The private club <br /> for modern gentlemen.</p>
                 </div>
 
                 <div className="absolute hidden md:block md:bottom-20 lg:bottom-0 right-0 p-20 space-y-4">
                     <p id="paragraph" className="text-xl max-w-xs text-description">Gain knowledge that isn't found in other networks and cultivate relationships that last a life-time.</p>
                     <Link href="#benefits" className="font-semibold md:hover:underline">
-                        <p id="letter">Learn More</p>
+                        <p id="sub">Learn More</p>
                     </Link>
                 </div>
             </section>

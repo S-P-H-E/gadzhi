@@ -5,8 +5,8 @@ const nav = [
         title: 'Benefits',
     },
     {
-        id: 'about-us',
-        title: 'About Us',
+        id: 'apply-now',
+        title: 'Apply Now',
     }
 ]
 
