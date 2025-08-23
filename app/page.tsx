@@ -1,4 +1,5 @@
 "use client"
+import Benefits from "@/components/benefits";
 import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
 import gsap from "gsap";
@@ -11,7 +12,7 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
-      
+      <Benefits />
     </main>
   );
 }

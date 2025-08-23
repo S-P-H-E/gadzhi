@@ -1,5 +1,3 @@
-// import { Libre_Baskerville } from "next/font/google"
-
 // Navigation
 const nav = [
     {
@@ -12,14 +10,20 @@ const nav = [
     }
 ]
 
-// Hero Font
-// const h1 = Libre_Baskerville({
-//     weight: ["400"],
-//     variable: "--font-libre",
-//     subsets: ["latin"],
-// });
+// Benefits
+const benefits = ['MEET YOUR BROTHERS', 'PRIVATE RESEARCH TEAM', 'THE PORTAL TO INTO GCC']
 
-export { nav }
+const images = [
+    '/benefits/01.jpg',
+    '/benefits/02.jpg',
+    '/benefits/03.jpg',
+    '/benefits/04.jpg',
+    '/benefits/01.jpg',
+    '/benefits/02.jpg',
+    '/benefits/03.jpg',
+    '/benefits/04.jpg',
+]
+export { nav, benefits, images }
 
 // * Notes
 /* Explaining 'bottom top':

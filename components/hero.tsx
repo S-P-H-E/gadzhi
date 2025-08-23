@@ -17,6 +17,7 @@ export default function Hero() {
 
         // heroSplit.chars.forEach((char) => char.classList.add('text-gradient'))
         gsap.from(heroSplit.chars, {
+            color: '#b95a2c',
             opacity: 0,
             yPercent: 50,
             duration: 2,
@@ -25,6 +26,7 @@ export default function Hero() {
         })
 
         gsap.from(paragraphSplit.lines, {
+            color: '#b95a2c',
             opacity: 0,
             yPercent: 100,
             duration: 2,
@@ -68,6 +70,7 @@ export default function Hero() {
                 }
               });
               tl.to(video, { currentTime: video.duration });
+              tl.to(video, { opacity: 0, duration: 0.2 }, ">-0.1");
           
               // clean up
               video.removeEventListener('loadedmetadata', onLoad);
@@ -80,10 +83,10 @@ export default function Hero() {
     return (
         <>
             <section id="hero" className="flex flex-col items-center min-h-dvh z-10">
-                <h1 id="letter" className="text-8xl md:text-[9vw] mt-48 md:mt-32 text-center md:w-[60vw] font-semibold">PRIVATE MEMBERS</h1>
+                <h1 id="letter" className="text-7xl md:text-[9vw] mt-48 md:mt-24 text-center md:w-[60vw] font-semibold">PRIVATE MEMBERS</h1>
 
                 <Image id="left-stick" className="absolute left-0 top-[400px] opacity-90" src='/hero-left-stick.png' alt="hero left stick" width={100} height={100}/>
-                <Image id="right-stick" className="absolute right-0 top-[200px] opacity-90" src='/hero-right-stick.png' alt="hero right stick" width={100} height={100}/>
+                <Image id="right-stick" className="absolute right-0 top-[50px] md:top-[200px] opacity-90" src='/hero-right-stick.png' alt="hero right stick" width={100} height={100}/>
 
                 <div className="absolute bottom-0 left-0 p-20 space-y-2">
                     <p id="letter" className="text-lg text-description">For. Modern. Gents</p>
@@ -92,7 +95,9 @@ export default function Hero() {
 
                 <div className="absolute hidden md:block md:bottom-20 lg:bottom-0 right-0 p-20 space-y-4">
                     <p id="paragraph" className="text-xl max-w-xs text-description">Gain knowledge that isn't found in other networks and cultivate relationships that last a life-time.</p>
-                    <Link id="letter" href="#benefits" className="font-semibold md:hover:underline">Learn More</Link>
+                    <Link href="#benefits" className="font-semibold md:hover:underline">
+                        <p id="letter">Learn More</p>
+                    </Link>
                 </div>
             </section>
 
