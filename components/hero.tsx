@@ -12,8 +12,10 @@ export default function Hero() {
     const isMobile = useMediaQuery({ maxWidth: 767 })
 
     useGSAP(() => {
-        const heroSplit = new SplitText('#letter', { type: 'chars, words'})
-        const subSplit = new SplitText('#sub', { type: 'chars, words'})
+        gsap.ticker.lagSmoothing(0)
+        
+        const heroSplit = new SplitText('#letter', { type: 'chars, words', mask: 'chars'})
+        const subSplit = new SplitText('#sub', { type: 'chars, words', mask: 'chars'})
         const paragraphSplit = new SplitText('#paragraph', { type: 'lines'})
 
         // heroSplit.chars.forEach((char) => char.classList.add('text-gradient'))

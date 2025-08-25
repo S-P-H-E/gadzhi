@@ -9,6 +9,8 @@ export default function Benefits() {
     const imgRef = useRef<HTMLImageElement>(null)
 
     useGSAP(() => {
+        gsap.ticker.lagSmoothing(0)
+        
         const subSplit = new SplitText('#sub2', { type: 'chars, words'})
         const paragraphSplit = new SplitText('#text', { type: 'lines'})
 

@@ -6,6 +6,8 @@ import Link from "next/link";
 
 export default function Navbar() {
     useGSAP(() => {
+        gsap.ticker.lagSmoothing(0)
+        
         const navTween = gsap.timeline({
             scrollTrigger: {
                 trigger: 'nav',
