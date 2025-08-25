@@ -10,9 +10,9 @@ export default function Benefits() {
 
     useGSAP(() => {
         gsap.ticker.lagSmoothing(0)
-        
-        const subSplit = new SplitText('#sub2', { type: 'chars, words'})
-        const paragraphSplit = new SplitText('#text', { type: 'lines'})
+
+        const subSplit = new SplitText('#sub2', { type: 'chars, words', mask: 'chars'})
+        const paragraphSplit = new SplitText('#text', { type: 'lines', mask: 'lines'})
 
         gsap.from(subSplit.chars, {
             color: '#b95a2c',

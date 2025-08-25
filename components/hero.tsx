@@ -13,10 +13,10 @@ export default function Hero() {
 
     useGSAP(() => {
         gsap.ticker.lagSmoothing(0)
-        
+
         const heroSplit = new SplitText('#letter', { type: 'chars, words', mask: 'chars'})
         const subSplit = new SplitText('#sub', { type: 'chars, words', mask: 'chars'})
-        const paragraphSplit = new SplitText('#paragraph', { type: 'lines'})
+        const paragraphSplit = new SplitText('#paragraph', { type: 'lines', mask: 'lines'})
 
         // heroSplit.chars.forEach((char) => char.classList.add('text-gradient'))
         gsap.from(heroSplit.chars, {
